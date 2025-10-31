@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GemeManager : MonoBehaviour
@@ -27,15 +28,10 @@ public class GemeManager : MonoBehaviour
 
         Pipes[] pipes = FindObjectsByType<Pipes>(FindObjectsSortMode.None);
 
-        //Pipes[] pipes = FindObjectsOfType<Pipes>();
-
-        //Pipes[] pipes = FindFirstObjectsByType<Pipes>();
-
         for (int i = 0; i < pipes.Length; i++)
         {
             Destroy(pipes[i].gameObject);
         }
-
     }
 
     public void Pause() {

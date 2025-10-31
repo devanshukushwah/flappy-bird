@@ -14,6 +14,8 @@ public class Player : MonoBehaviour
     public Sprite[] sprites;
     private int spriteIdx;
 
+    public GemeManager gemeManager;
+
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -25,6 +27,7 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
+        gemeManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GemeManager>();
         InvokeRepeating(nameof(AnimateSprite), 0.15f, 0.15f);
     }
 
@@ -64,10 +67,7 @@ public class Player : MonoBehaviour
     {
         if (other.gameObject.tag == "Obstacle")
         {
-            FindFirstObjectByType<GemeManager>().GameOver();
-        }
-        else if (other.gameObject.tag == "Scoring") {
-            FindFirstObjectByType<GemeManager>().IncreaseScore();
+            gemeManager.GameOver();
         }
     }
 
