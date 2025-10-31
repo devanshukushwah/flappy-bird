@@ -710,6 +710,7 @@ MonoBehaviour:
   - {fileID: 3702851186854595977, guid: 53bc24f5de9276a45a50899493e5a1a6, type: 3}
   - {fileID: 4125150189441033765, guid: 8b35227870aa3d74c8bc47ff7bb417ef, type: 3}
   - {fileID: -8049360793807390311, guid: 60cf0e8d41da00a42b8547e22ad18b60, type: 3}
+  gemeManager: {fileID: 0}
 --- !u!58 &1764308051
 CircleCollider2D:
   m_ObjectHideFlags: 0
